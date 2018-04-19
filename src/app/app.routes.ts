@@ -2,11 +2,15 @@
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutComponent,PortafolioComponent,ItemComponent } from './components/index.paginas';
+import { AboutComponent
+    ,PortafolioComponent
+    ,ItemComponent
+    ,SearchComponent } from './components/index.paginas';
 
 const app_routes: Routes = [
   { path: 'home', component: PortafolioComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'buscar/:termino', component: SearchComponent },
   { path: 'item/:id', component: ItemComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
